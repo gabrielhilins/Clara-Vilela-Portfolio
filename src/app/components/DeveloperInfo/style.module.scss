@@ -1,0 +1,41 @@
+.columnDev {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-quicksand); 
+}
+
+.devContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.developerText {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+  font-style: italic;
+  white-space: nowrap;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.wordmarkLink {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.wordmarkLink:hover {
+  transform: translateY(-2px);
+}
+
+.wordmarkImage {
+  height: 18px;
+  width: auto;
+  opacity: 0.9;
+  display: block;
+}

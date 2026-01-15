@@ -1,0 +1,135 @@
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.projectsContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 70vh;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.projectPanel {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: flex 0.8s cubic-bezier(0.25, 0.4, 0.45, 0.95);
+  will-change: flex; 
+  cursor: pointer;
+}
+
+.projectPanel:hover {
+  flex: 5;
+}
+
+.panelContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.projectNumber {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projectDetails {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+.projectPanel:hover .projectDetails {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectPanel:hover .projectNumber {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.projectDetails h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projectDetails p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify; 
+}
+
+.learnMoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid white;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.learnMoreButton:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .projectsContainer {
+    flex-direction: column;
+    height: auto;
+    max-width: 500px;
+  }
+  .projectPanel {
+    flex: 1;
+    height: 250px; 
+  }
+  .projectPanel:hover {
+    flex: 1; 
+  }
+  .projectDetails {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .projectNumber {
+    display: none;
+  }
+}

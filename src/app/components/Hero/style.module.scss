@@ -1,0 +1,56 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 1rem;
+  text-align: center;
+  height: 100%; 
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    gap: 4rem; 
+  }
+}
+
+.title {
+  font-size: clamp(3rem, 10vw, 128px); 
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  font-size: clamp(2rem, 8vw, 64px); 
+  color: var(--primary-color);
+}
+
+.heroImagePlaceholder {
+  width: clamp(100px, 20vw, 120px);
+  height: clamp(100px, 20vw, 120px);
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImagePlaceholder img { 
+  animation: spin 10s linear infinite; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.yearText {
+  font-size: clamp(1.5rem, 5vw, 36px);
+  color: var(--primary-color);
+}
+

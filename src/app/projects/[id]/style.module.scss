@@ -1,0 +1,142 @@
+.projectPageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  
+}
+
+.backButton {
+  
+  
+  
+  
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  align-self: flex-start; 
+  margin-bottom: 1rem; 
+  margin-left: max(2rem, calc((100% - 1400px) / 2)); 
+  
+}
+
+.backButton:hover {
+  transform: translateX(-5px); 
+  text-decoration: underline;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.contentContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  gap: 3rem;
+}
+
+.leftColumn {
+  flex: 2;
+  min-height: 500px; /* Ensure a minimum height for images to render */
+}
+
+.rightColumn {
+  flex: 1; 
+  color: var(--primary-color);
+}
+
+.rightColumn h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.titleHr {
+  border: none;
+  height: 2px;
+  background-color: var(--primary-color);
+  width: 70%;
+  margin: 0 0 1.5rem 0; 
+}
+
+.rightColumn p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem; 
+  text-align: justify;
+}
+
+.strategiesSection {
+  margin-top: 2rem;
+}
+
+.strategiesSection h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.strategiesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.strategiesList li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.viewGalleryButton {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem; 
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+  width: auto; 
+  display: inline-flex; 
+  align-items: center;
+  gap: 0.5rem; 
+}
+
+.viewGalleryButton:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.projectNotFound {
+  text-align: center;
+  color: var(--primary-color);
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+}

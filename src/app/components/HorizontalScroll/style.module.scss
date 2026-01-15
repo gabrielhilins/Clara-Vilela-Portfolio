@@ -1,0 +1,21 @@
+.scrollContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollPanel {
+  display: flex;
+  height: 100%;
+  width: max-content; 
+}
+
+
+:global(.panel) {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
