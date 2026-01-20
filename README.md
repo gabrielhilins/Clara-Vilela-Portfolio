@@ -2,6 +2,9 @@
 
 Este é o site de portfólio de Clara Vilela, uma estudante de arquitetura. O projeto foi desenvolvido utilizando Next.js, TypeScript e Sass, com foco na criação de componentes reutilizáveis e uma estrutura de código limpa e organizada.
 
+## Acessar o Portfólio
+Você pode visualizar o portfólio online aqui: [Link do Portfólio](https://clara-vilela-portfolio.vercel.app/)
+
 ## Estrutura de Pastas
 
 O projeto segue a estrutura de pastas padrão do Next.js, com algumas adições para melhor organização:
@@ -20,4 +23,4 @@ O projeto segue a estrutura de pastas padrão do Next.js, com algumas adições 
 
 ---
 
-Todos os direitos reservados.
+© 2026. GGABS TECH & DESIGN. Todos os direitos reservados.
