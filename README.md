@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio Clara Vilela
 
-## Getting Started
+Este é o site de portfólio de Clara Vilela, uma estudante de arquitetura. O projeto foi desenvolvido utilizando Next.js, TypeScript e Sass, com foco na criação de componentes reutilizáveis e uma estrutura de código limpa e organizada.
 
-First, run the development server:
+## Estrutura de Pastas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto segue a estrutura de pastas padrão do Next.js, com algumas adições para melhor organização:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **`/public`**: Contém todos os ativos estáticos, como imagens (PNG, JPG, SVG) e outros arquivos que são servidos diretamente pelo navegador.
+- **`/src/app`**: O coração da aplicação Next.js utilizando o App Router.
+  - **`/components`**: Abriga os componentes React reutilizáveis que compõem a interface do usuário, como o carrossel de imagens, a grade de projetos e seções de texto.
+  - **`/data`**: Armazena dados estáticos da aplicação, como informações sobre projetos, experiências e habilidades, mantendo a lógica de apresentação separada dos dados.
+  - **`/hooks`**: Contém hooks personalizados do React, como o `useMediaQuery` para lidar com responsividade de forma programática.
+  - **`/links`**: Página dedicada a agregador de links.
+  - **`/projects/[id]`**: Rota dinâmica para exibir detalhes de projetos individuais, onde `[id]` é o identificador único de cada projeto.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Visualização
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Imagem do Projeto](./public/MariaClaraPreview.png)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Todos os direitos reservados.
