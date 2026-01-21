@@ -39,3 +39,9 @@
   opacity: 0.9;
   display: block;
 }
+
+@media (min-width: 1200px) {
+  .developerText {
+    font-size: 0.9rem;
+  }
+}

@@ -16,13 +16,13 @@
 }
 
 .title {
-  font-size: clamp(3rem, 10vw, 128px); 
+  font-size: clamp(3rem, 10vw, 160px); 
   font-weight: 500;
   color: var(--primary-color);
 }
 
 .subtitle {
-  font-size: clamp(2rem, 8vw, 64px); 
+  font-size: clamp(2rem, 8vw, 80px); 
   color: var(--primary-color);
 }
 
@@ -50,7 +50,7 @@
 }
 
 .yearText {
-  font-size: clamp(1.5rem, 5vw, 36px);
+  font-size: clamp(1.5rem, 5vw, 48px);
   color: var(--primary-color);
 }
 

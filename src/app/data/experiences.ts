@@ -5,7 +5,7 @@ export const experiencesData = [
     description: "Desenvolvimento de projetos arquitetônicos, desde a concepção até o detalhamento, utilizando AutoCAD e Revit.",
     timeRange: "Novembro 2025 - Presente",
     startDate: new Date(2025, 10, 1), 
-    imageUrl: "/experience-placeholder,jpg",
+    imageUrl: "/GRADUAÇÃO.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const experiencesData = [
     description: "Apoio na elaboração de plantas, cortes e fachadas. Compatibilização de projetos complementares.",
     timeRange: "Outubro 2024 - Outubro 2025",
     startDate: new Date(2024, 9, 1), 
-    imageUrl: "/experience-placeholder.jpg",
+    imageUrl: "/EM.png",
   },
   {
     id: 3,

@@ -3,66 +3,79 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
-  padding: 2rem;
-  
+  padding: 3rem 2rem;
 }
 
+/* ---------- BACK BUTTON ---------- */
+
 .backButton {
-  
-  
-  
-  
   background: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   transition: all 0.2s ease;
-  align-self: flex-start; 
-  margin-bottom: 1rem; 
-  margin-left: max(2rem, calc((100% - 1400px) / 2)); 
-  
+  /* align-self: flex-start; */ /* Removed for large screens */
+  max-width: 1400px; /* Match contentContainer max-width */
+  width: 100%; /* Take full width of its max-width container */
+  justify-content: flex-start; /* Align content to the start */
+  margin-bottom: 2rem;
 }
 
 .backButton:hover {
-  transform: translateX(-5px); 
+  transform: translateX(-4px);
   text-decoration: underline;
 }
 
+/* ---------- TITLE ---------- */
+
 .sectionTitle {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem; /* mais respiro */
   text-align: center;
 }
+
+/* ---------- CONTENT ---------- */
 
 .contentContainer {
   display: flex;
   width: 100%;
   max-width: 1400px;
-  gap: 3rem;
+  gap: 4rem; /* mais espaço entre colunas */
+  align-items: flex-start;
 }
+
+/* ---------- LEFT (IMAGES) ---------- */
 
 .leftColumn {
   flex: 2;
-  min-height: 500px; /* Ensure a minimum height for images to render */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔑 centraliza galeria */
 }
 
+.leftColumn .bentoGrid {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ---------- RIGHT (TEXT) ---------- */
+
 .rightColumn {
-  flex: 1; 
+  flex: 1;
   color: var(--primary-color);
 }
 
 .rightColumn h3 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .titleHr {
@@ -70,61 +83,161 @@
   height: 2px;
   background-color: var(--primary-color);
   width: 70%;
-  margin: 0 0 1.5rem 0; 
+  margin: 0 0 2rem 0;
 }
 
 .rightColumn p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
-  margin-bottom: 2.5rem; 
+  margin-bottom: 3rem; /* mais respiro */
   text-align: justify;
 }
 
+/* ---------- STRATEGIES ---------- */
+
 .strategiesSection {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .strategiesSection h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .strategiesList {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 .strategiesList li {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.25rem;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin: 0 0.6rem 0.6rem 0;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
 }
+
+/* ---------- GALLERY BUTTON ---------- */
 
 .viewGalleryButton {
   background-color: transparent;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  padding: 0.5rem 1rem; 
-  border-radius: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 0.55rem;
   cursor: pointer;
-  font-size: 0.9rem; 
+  font-size: 0.85rem;
   font-weight: 500;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   transition: all 0.2s ease;
-  width: auto; 
-  display: inline-flex; 
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem; 
+  gap: 0.5rem;
 }
 
 .viewGalleryButton:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
+
+/* ================================================================= */
+/* =========================== RESPONSIVE ========================== */
+/* ================================================================= */
+
+@media (max-width: 900px) {
+  .projectPageSection {
+    padding: 3rem 1.5rem;
+  }
+
+  /* 🔝 botão centralizado no topo */
+  .backButton {
+    align-self: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    gap: 4rem; /* mais espaço vertical */
+    align-items: center;
+  }
+
+  /* 🔁 texto primeiro */
+  .rightColumn {
+    order: 1;
+    text-align: center;
+  }
+
+  .leftColumn {
+    order: 2;
+    width: 100%;
+  }
+
+  .rightColumn h3 {
+    font-size: 1.8rem;
+  }
+
+  .titleHr {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rightColumn p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .strategiesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .viewGalleryButton {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 500px) {
+  .projectPageSection {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .sectionTitle {
+    margin-bottom: 2.5rem;
+  }
+
+  .rightColumn h3 {
+    font-size: 1.5rem;
+  }
+
+  .rightColumn p {
+    font-size: 0.95rem;
+  }
+
+  .strategiesSection {
+    margin-top: 2rem;
+  }
+
+  .strategiesSection h4 {
+    font-size: 1.2rem;
+  }
+
+  .strategiesList li {
+    font-size: 0.85rem;
+  }
+
+  .viewGalleryButton {
+    width: 100%;              
+    justify-content: center;
+  }
+}
+
+/* ---------- NOT FOUND ---------- */
 
 .projectNotFound {
   text-align: center;
@@ -133,10 +246,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 900px) {
-  .contentContainer {
-    flex-direction: column;
-  }
 }

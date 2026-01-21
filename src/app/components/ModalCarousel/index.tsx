@@ -1,10 +1,17 @@
 "use client";
 
-import React, { useState } from 'react';
-import style from './style.module.scss';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { IoClose, IoChevronBack, IoChevronForward } from 'react-icons/io5';
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Zoom, Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
+import { IoClose } from "react-icons/io5";
+
+import "swiper/css";
+import "swiper/css/zoom";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import style from "./style.module.scss";
 
 interface ModalCarouselProps {
   images: string[];
@@ -12,56 +19,60 @@ interface ModalCarouselProps {
   onClose: () => void;
 }
 
-const ModalCarousel: React.FC<ModalCarouselProps> = ({ images, initialIndex, onClose }) => {
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+const ModalCarousel: React.FC<ModalCarouselProps> = ({
+  images,
+  initialIndex,
+  onClose,
+}) => {
+  const [showHint, setShowHint] = useState(true);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => setShowHint(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <motion.div
-      className={style.modalOverlay}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <button className={`${style.navButton} ${style.closeButton}`} onClick={onClose}>
+    <div className={style.overlay}>
+      <button className={style.closeButton} onClick={onClose}>
         <IoClose />
       </button>
 
-      <button className={`${style.navButton} ${style.prevButton}`} onClick={handlePrev}>
-        <IoChevronBack />
-      </button>
+      {showHint && (
+        <div className={style.swipeHint}>
+          Arraste para o lado para ver mais fotos
+        </div>
+      )}
 
-      <div className={style.imageContainer}>
-        <AnimatePresence initial={false} custom={currentIndex}>
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.3 }}
-            className={style.imageWrapper}
-          >
-            <Image 
-              src={images[currentIndex]} 
-              alt={`Project image ${currentIndex + 1}`} 
-              layout="fill" 
-              objectFit="contain" 
-            />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <button className={`${style.navButton} ${style.nextButton}`} onClick={handleNext}>
-        <IoChevronForward />
-      </button>
-    </motion.div>
+      <Swiper
+        modules={[Zoom, Pagination, Navigation]}
+        initialSlide={initialIndex}
+        slidesPerView={1}
+        centeredSlides
+        loop
+        zoom
+        grabCursor
+        pagination={{ clickable: true }}
+        navigation={true}
+        className={style.swiper}
+        onTouchStart={() => setShowHint(false)} // some ao interagir
+        onSlideChange={() => setShowHint(false)}
+      >
+        {images.map((img, index) => (
+          <SwiperSlide key={index}>
+            <div className="swiper-zoom-container">
+              <Image
+                src={img}
+                alt={`Imagem do projeto ${index + 1}`}
+                fill
+                sizes="100vw"
+                priority={index === initialIndex}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

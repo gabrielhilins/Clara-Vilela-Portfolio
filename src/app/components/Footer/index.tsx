@@ -21,6 +21,7 @@ const Footer = () => {
           <button onClick={scrollToTop} className={style.backToTopButton}>
             <IoArrowBack /> Voltar para o início
           </button>
+          <p className={style.thankYouText}>Obrigada por ter parado para olhar meu trabalho!</p>
           <p>© {new Date().getFullYear()} Clara Vilela. Todos os direitos Reservados.</p>
           <DeveloperInfo />
         </footer>

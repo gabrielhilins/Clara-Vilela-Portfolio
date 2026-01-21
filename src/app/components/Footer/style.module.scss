@@ -13,21 +13,51 @@
 }
 
 .backToTopButton {
-  background: none;
-  border: none;
+  background: transparent;
+  border: 1px solid var(--primary-color);
   color: var(--primary-color);
   cursor: pointer;
-  font-size: 1.5rem; 
+  font-size: 1.1rem; /* New base font size */
+  padding: 0.5rem 1rem; /* Adjusted padding */
+  border-radius: 999px;
   display: flex;
   align-items: center;
-  gap: 0.75rem; 
+  gap: 0.5rem;
   margin-bottom: 2rem; 
-  transition: color 0.3s ease;
+  transition: all 0.2s ease;
 
   &:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     svg {
       transform: translateX(-5px);
-      transition: transform 0.3s ease;
     }
+  }
+}
+
+.thankYouText {
+  color: var(--primary-color);
+  font-size: 2.8rem; /* Significantly larger base font size */
+  margin-bottom: 1rem; 
+}
+
+.footerSection p { 
+  color: var(--primary-color);
+  font-size: 1.3rem; /* Smaller base font size for copyright */
+  margin-top: 1rem; 
+}
+
+@media (min-width: 1200px) {
+  .backToTopButton {
+    font-size: 1.3rem; /* Larger for desktop */
+    padding: 0.7rem 1.2rem; /* Adjusted padding */
+  }
+
+  .thankYouText {
+    font-size: 3.2rem; /* Significantly larger for desktop */
+  }
+
+  .footerSection p {
+    font-size: 1.5rem; /* Smaller for desktop copyright */
   }
 }

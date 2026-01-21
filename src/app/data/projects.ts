@@ -30,23 +30,30 @@ export const projectsData = [
   },
   {
     projectNumber: "03",
-    title: "Clínica Odontológica",
-    description: "Design de interiores para uma clínica odontológica, criando um ambiente acolhedor e profissional.",
+    title: "3. Casa Corellia",
+    description: "Como projeto desenvolvido para a disciplina de Projeto de Edificações II, a casa Corellia é o produto de uma proposta de cohabitação multifamiliar. A fim de unir uma família e suas diversas atividades, o projeto se propõe a criar um espaço confortável, acessível e marcante para aqueles que ali vivem. Elementos como a brasilidade e dinamicidade são trabalhados em um estilo retrofuturista, expressados na sua forma e materiais.",
     imageUrl: "/Projeto-3.png",
     url: "/projects/3",
     images: [
       "/Projeto-3.png",
+      "/Projeto-3-1.png",
+      "/Projeto-3-2.png",
+      "/Projeto-3-3.png",
     ],
     strategies: ["Desenho Técnico", "Revit", "Gestão de Obra"]
   },
   {
     projectNumber: "04",
-    title: "Praça Pública",
-    description: "Projeto de revitalização de uma praça pública, com foco em sustentabilidade e acessibilidade.",
+    title: "4. Masterplan de João Pessoa",
+    description: "O Masterplan de João Pessoa é o projeto final da disciplina de Urbanismo I, desenvolvido juntamente aos alunos Eduarda Santos e Pedro Salvador. Guiado pelo sistema viário da cidade, o Masterplan foca em três áreas de João Pessoa que carecem de escala humana, e apresenta maneiras de melhorar esses espaços com base pesquisas bibliográficas.",
     imageUrl: "/Projeto-4.png",
     url: "/projects/4",
     images: [
-      "/Projeto-4.png",
+      "/Projeto-4-1.png",
+      "/Projeto-4-2.png",
+      "/Projeto-4-3.png",
+      "/Projeto-4-4.png",
+      "/Projeto-4-5.png",
     ],
     strategies: ["QGIS", "Urbanismo", "Paisagismo", "AutoCAD"]
   }

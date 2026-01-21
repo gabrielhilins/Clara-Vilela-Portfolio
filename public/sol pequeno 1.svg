@@ -1,0 +1,17 @@
+<svg width="173" height="173" viewBox="0 0 173 173" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Repeat group 1_inner" data-figma-trr="r4u1.5-0f">
+<ellipse cx="84.1749" cy="41.552" rx="9.99155" ry="30.396" transform="rotate(177.27 84.1749 41.552)" fill="#000091"/>
+<ellipse cx="84.1749" cy="41.552" rx="9.99155" ry="30.396" transform="rotate(177.27 84.1749 41.552)" fill="#000091"/>
+</g>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(173.441 0.747812) rotate(90)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(172.693 174.189) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-0.74781 173.441) rotate(-90)"/>
+<g id="Repeat group 2_inner" data-figma-trr="r4u1.6-0f">
+<ellipse cx="60.9802" cy="60.8379" rx="5.46143" ry="22.2658" transform="rotate(-44.3448 60.9802 60.8379)" fill="#EBFF0B"/>
+</g>
+<use xlink:href="#Repeat%20group%202_inner" transform="translate(172.304 -8.54883e-05) rotate(90)"/>
+<use xlink:href="#Repeat%20group%202_inner" transform="translate(172.304 172.304) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%202_inner" transform="translate(8.82268e-05 172.304) rotate(-90)"/>
+<ellipse cx="132.308" cy="84.6275" rx="11" ry="32.5" transform="rotate(-92.7303 132.308 84.6275)" fill="#FFFFFB"/>
+<ellipse cx="89.0745" cy="133.242" rx="11" ry="32.5" transform="rotate(177.27 89.0745 133.242)" fill="#FFFFFB"/>
+</svg>

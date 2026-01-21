@@ -10,7 +10,7 @@
 }
 
 .sectionTitle {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -56,7 +56,7 @@
 }
 
 .textContainer h3 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem); 
+  font-size: clamp(1.2rem, 3vw, 1.8rem); 
   font-weight: 600;
   margin: 0;
 }
@@ -70,13 +70,13 @@
 }
 
 .textContainer p {
-  font-size: clamp(0.9rem, 2vw, 1rem); 
+  font-size: clamp(0.9rem, 2vw, 1.1rem); 
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
 .timeRange {
-  font-size: clamp(0.8rem, 1.8vw, 0.9rem); 
+  font-size: clamp(0.8rem, 1.8vw, 1rem); 
   font-style: italic;
   margin-top: 0.5rem;
 }
@@ -113,6 +113,32 @@
 .navigation button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+@media (min-width: 1200px) {
+  .experiencesSection {
+    padding: 3rem 2rem;
+  }
+
+  .experiencesList {
+    gap: 3rem;
+  }
+
+  .experienceItem {
+    padding: 2rem;
+    gap: 2.5rem;
+  }
+
+  .imageContainer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .navigation button {
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (min-width: 768px) {
