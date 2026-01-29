@@ -1,12 +1,14 @@
+/* ===================== 
+   EXPERIENCES SECTION 
+===================== */
+
 .experiencesSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 2rem 1rem; 
-  position: relative;
+  padding: clamp(2rem, 5vh, 4rem) 1rem;
+  background-color: #fff;
+  height: 80dvh;
 }
 
 .sectionTitle {
@@ -14,157 +16,137 @@
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
   text-align: center;
 }
 
 .experiencesList {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   width: 100%;
-  max-width: 900px;
-  opacity: 1;
+  max-width: 1100px;
 }
+
+/* ===================== 
+   EXPERIENCE ITEM 
+===================== */
 
 .experienceItem {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.25rem, 2vw, 1.75rem);
+  border: 1.5px solid var(--primary-color);
+  border-radius: 24px;
   width: 100%;
-  padding: 1.5rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5rem;
-  background-color: var(--secondary-color);
 }
 
-.imageContainer {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  flex-shrink: 0;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background-color: #f0f0f0;
+.experienceItem.itemLeft {
+  flex-direction: row;
 }
+
+.experienceItem.itemRight {
+  flex-direction: row-reverse;
+}
+
+/* ===================== 
+   IMAGE 
+===================== */
+
+.imageWrapper {
+  flex-shrink: 0;
+  width: clamp(95px, 15vw, 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===================== 
+   TEXT 
+===================== */
 
 .textContainer {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  color: var(--primary-color);
-  flex-grow: 1;
 }
 
-.textContainer h3 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem); 
-  font-weight: 600;
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.experienceTitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+  font-weight: 700;
   margin: 0;
-}
-
-.titleHr {
-  border: none;
-  height: 2px;
-  background-color: var(--primary-color);
-  width: 50%;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.textContainer p {
-  font-size: clamp(0.9rem, 2vw, 1.1rem); 
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
-.timeRange {
-  font-size: clamp(0.8rem, 1.8vw, 1rem); 
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-.navigation {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.navigation button {
-  padding: 0.5rem;
-  background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
 }
 
-.navigation button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.titleLine {
+  width: 100%;
+  border: none;
+  border-top: 2px solid var(--primary-color);
 }
 
-.navigation button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.description {
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+  text-align: justify;
 }
 
-@media (min-width: 1200px) {
-  .experiencesSection {
-    padding: 3rem 2rem;
-  }
+/* ===================== 
+   TABLET 
+===================== */
 
-  .experiencesList {
-    gap: 3rem;
-  }
-
+@media (max-width: 1024px) {
   .experienceItem {
-    padding: 2rem;
-    gap: 2.5rem;
+    gap: 1.75rem;
   }
 
-  .imageContainer {
-    width: 180px;
-    height: 180px;
-  }
-
-  .navigation button {
-    font-size: 1.8rem;
-    width: 50px;
-    height: 50px;
+  .description {
+    text-align: left;
   }
 }
 
-@media (min-width: 768px) {
-  .sectionTitle {
-    margin-bottom: 4rem;
-  }
-}
+/* ===================== 
+   MOBILE 
+===================== */
 
 @media (max-width: 768px) {
-  .experiencesSection {
-    padding: 2rem 1rem;
-  }
   .experienceItem {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
+    padding: 1.75rem 1.25rem;
   }
-  .imageContainer {
-    width: 120px;
-    height: 120px;
+
+  .imageWrapper {
+    width: clamp(110px, 38vw, 150px);
   }
-  .titleHr {
-    width: 80%;
-    margin: 0.5rem auto 1rem auto;
+
+  .titleWrapper {
+    align-items: center;
+    text-align: center;
   }
-  .timeRange {
-    align-self: center;
+
+  .titleLine {
+    width: 55%;
+    margin: 0.5rem auto 0;
+  }
+
+  .description {
+    text-align: center;
   }
 }

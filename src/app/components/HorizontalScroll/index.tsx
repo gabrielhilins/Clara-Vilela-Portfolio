@@ -21,6 +21,8 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({ children }) => {
 
     if (!container || !panel) return;
 
+    console.log('HorizontalScroll: container.offsetWidth', container.offsetWidth);
+    console.log('HorizontalScroll: panel.scrollWidth', panel.scrollWidth);
     
     const ctx = gsap.context(() => {
       

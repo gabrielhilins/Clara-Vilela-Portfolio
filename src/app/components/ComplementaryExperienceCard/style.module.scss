@@ -1,0 +1,153 @@
+.card {
+  display: flex;
+  width: 100%;
+  max-width: 1000px; /* card maior */
+  min-height: 300px; /* altura mínima controlada */
+  background-color: var(--secondary-color);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+}
+
+.hr{
+  color: var(--primary-color);
+}
+
+/* ================= IMAGE ================= */
+
+.imageWrapper {
+  position: relative;
+  width: 40%;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 1.25rem 0 0 1.25rem; /* Round only the left corners */
+}
+
+.image {
+  transition: transform 0.6s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+/* ================= CONTENT ================= */
+
+.cardContent {
+  width: 62%;
+  padding: 2.25rem 2.5rem; /* mais respiro */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cardContent h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--primary-color);
+}
+
+.cardContent p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #4a4a4a;
+  text-align: justify;
+}
+
+/* ================= BUTTON ================= */
+
+.learnMoreButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  padding: 0.75rem 1.7rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: background-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.learnMoreButton:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card {
+    min-height: 300px;
+  }
+
+  .imageWrapper {
+    width: 42%;
+  }
+
+  .cardContent {
+    padding: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    min-height: 220px; /* imagem menor no mobile */
+  }
+
+  .cardContent {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.45rem;
+  }
+
+  .cardContent p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .imageWrapper {
+    min-height: 190px;
+  }
+
+  .learnMoreButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -12,7 +12,7 @@ export const projectsData = [
       "/Projeto-1-4.png",
       "/Projeto-1-5.png",
     ],
-    strategies: ["AutoCAD", "Revit", "Modelagem 3D", "Renderização com Lumion"]
+    softwares: ["/simple-icons_sketchup.svg", "/simple-icons_canva.svg"]
   },
   {
     projectNumber: "02",
@@ -26,7 +26,7 @@ export const projectsData = [
       "/Projeto-2-3.png",
       "/Projeto-2-4.png",
     ],
-    strategies: ["SketchUp", "V-Ray", "Design Gráfico"]
+    softwares: ["/game-icons_rhinoceros-horn.svg", "/simple-icons_canva.svg"]
   },
   {
     projectNumber: "03",
@@ -40,7 +40,7 @@ export const projectsData = [
       "/Projeto-3-2.png",
       "/Projeto-3-3.png",
     ],
-    strategies: ["Desenho Técnico", "Revit", "Gestão de Obra"]
+    softwares: ["/simple-icons_autodeskrevit.svg", "/simple-icons_canva.svg"]
   },
   {
     projectNumber: "04",
@@ -55,6 +55,6 @@ export const projectsData = [
       "/Projeto-4-4.png",
       "/Projeto-4-5.png",
     ],
-    strategies: ["QGIS", "Urbanismo", "Paisagismo", "AutoCAD"]
+    softwares: ["/simple-icons_qgis.svg", "/simple-icons_canva.svg"]
   }
 ];

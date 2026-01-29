@@ -13,4 +13,14 @@ export const skillsData = {
   idiomas: [
     { name: "Inglês", level: "Avançado", logoUrl: "/clarity_language-solid.svg" }, 
   ],
+  others: [
+    { name: "Modelagem 3D", level: "N/A", logoUrl: "/window.svg" },
+    { name: "Desenho Técnico", level: "N/A", logoUrl: "/file.svg" },
+    { name: "Urbanismo", level: "N/A", logoUrl: "/globe.svg" },
+    { name: "Renderização com Lumion", level: "N/A", logoUrl: "/window.svg" },
+    { name: "V-Ray", level: "N/A", logoUrl: "/window.svg" },
+    { name: "Design Gráfico", level: "N/A", logoUrl: "/file.svg" },
+    { name: "Gestão de Obra", level: "N/A", logoUrl: "/globe.svg" },
+    { name: "Paisagismo", level: "N/A", logoUrl: "/sol pequeno 1.svg" },
+  ]
 };

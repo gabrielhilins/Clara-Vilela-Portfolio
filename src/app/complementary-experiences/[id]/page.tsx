@@ -8,20 +8,20 @@ import ModalCarousel from "../../components/ModalCarousel";
 
 import { AiFillPicture } from "react-icons/ai";
 import { IoArrowBack } from "react-icons/io5";
-import { MdOutlineSlideshow } from "react-icons/md";
 
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
-import { projectsData } from "@/app/data/projects";
-import { skillsData } from "@/app/data/skills";
+import { complementaryExperiencesData } from "@/app/data/complementaryExperiences";
 import Image from "next/image";
 
-const ProjectPage = () => {
+const ComplementaryExperiencePage = () => {
   const params = useParams();
   const router = useRouter();
-  const projectId = params.id;
+  const experienceId = params.id;
 
-  const project = projectsData.find((p) => p.url === `/projects/${projectId}`);
+  const experience = complementaryExperiencesData.find(
+    (e) => e.id === experienceId
+  );
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -35,26 +35,15 @@ const ProjectPage = () => {
     setIsModalOpen(false);
   };
 
-  if (!project) {
+  if (!experience) {
     return (
       <Frame>
         <div className={style.projectNotFound}>
-          <h2>Projeto não encontrado</h2>
+          <h2>Experiência não encontrada</h2>
         </div>
       </Frame>
     );
   }
-
-  const allSkills = [
-    ...skillsData.softwares,
-    ...skillsData.design,
-    ...skillsData.idiomas,
-    ...skillsData.others,
-  ];
-
-  const getSkillFromUrl = (url: string) => {
-    return allSkills.find((s) => s.logoUrl === url);
-  };
 
   return (
     <Frame>
@@ -67,52 +56,35 @@ const ProjectPage = () => {
             <IoArrowBack /> Voltar para página inicial
           </button>
 
-          <h2 className={style.sectionTitle}>PROJETOS</h2>
+          <h2 className={style.sectionTitle}>EXPERIÊNCIAS COMPLEMENTARES</h2>
 
           <div className={style.contentContainer}>
             <div className={style.leftColumn}>
-              <BentoGrid images={project.images} onImageClick={openModal} />
+              <BentoGrid images={experience.imagesSrc} onImageClick={openModal} />
               <button
                 className={style.viewGalleryButton}
                 onClick={() => openModal(0)}
               >
-                <AiFillPicture /> Ver galeria completa do projeto
+                <AiFillPicture /> Ver galeria completa da experiência
               </button>
             </div>
 
             <div className={style.rightColumn}>
-              <h3>{project.title}</h3>
+              <h3>{experience.title}</h3>
               <hr className={style.titleHr} />
-              <p>{project.description}</p>
+              <p>{experience.description}</p>
 
               <div className={style.strategiesSection}>
-                <h4>Softwares utilizados</h4>
+                <h4>Estratégias</h4>
 
                 <div className={style.strategiesRow}>
                   <ul className={style.strategiesList}>
-                    {project.softwares.map((softwareUrl, index) => {
-                      const skill = getSkillFromUrl(softwareUrl);
-                      const softwareName = skill ? skill.name : "";
-                      return (
-                        <li key={index} title={softwareName}>
-                          <Image
-                            src={softwareUrl}
-                            alt={`${softwareName} logo`}
-                            width={36}
-                            height={36}
-                          />
-                        </li>
-                      );
-                    })}
+                    {experience.strategies.map((strategy, index) => (
+                      <li key={index}>
+                        <span>{strategy}</span>
+                      </li>
+                    ))}
                   </ul>
-
-                  <button
-                    className={style.seeMoreProjectButton}
-                    onClick={() => openModal(0)}
-                  >
-                    <MdOutlineSlideshow />
-                    Acesse a apresentação final do projeto
-                  </button>
                 </div>
               </div>
             </div>
@@ -120,7 +92,7 @@ const ProjectPage = () => {
 
           {isModalOpen && (
             <ModalCarousel
-              images={project.images}
+              images={experience.imagesSrc}
               initialIndex={selectedImageIndex}
               onClose={closeModal}
             />
@@ -131,4 +103,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default ComplementaryExperiencePage;

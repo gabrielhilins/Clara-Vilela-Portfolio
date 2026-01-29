@@ -3,61 +3,58 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem; 
+  height: 80dvh;
+  padding: clamp(5rem, 10vh, 7rem) 2rem;
   text-align: center;
-
-  p { 
-    color: var(--primary-color);
-    font-size: 1.2rem; 
-  }
+  gap: 6rem;
 }
+
+/* ---------- BACK TO TOP ---------- */
 
 .backToTopButton {
   background: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   cursor: pointer;
-  font-size: 1.1rem; /* New base font size */
-  padding: 0.5rem 1rem; /* Adjusted padding */
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.45rem 1.1rem;
   border-radius: 999px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem; 
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    svg {
-      transform: translateX(-5px);
-    }
-  }
+  gap: 0.45rem;
+  opacity: 0.85;
+  transition: all 0.25s ease;
 }
+
+.backToTopButton:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* ---------- THANK YOU (FOCO ABSOLUTO) ---------- */
 
 .thankYouText {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
   color: var(--primary-color);
-  font-size: 2.8rem; /* Significantly larger base font size */
-  margin-bottom: 1rem; 
+  line-height: 1.1;
+  margin: 0;
 }
 
-.footerSection p { 
-  color: var(--primary-color);
-  font-size: 1.3rem; /* Smaller base font size for copyright */
-  margin-top: 1rem; 
+.bottom {
+  gap: 5px;
 }
 
-@media (min-width: 1200px) {
-  .backToTopButton {
-    font-size: 1.3rem; /* Larger for desktop */
-    padding: 0.7rem 1.2rem; /* Adjusted padding */
-  }
+/* ---------- COPYRIGHT ---------- */
 
-  .thankYouText {
-    font-size: 3.2rem; /* Significantly larger for desktop */
-  }
+.footerSection p {
+  color: var(--primary-color);
+}
 
-  .footerSection p {
-    font-size: 1.5rem; /* Smaller for desktop copyright */
-  }
+.copyright {
+  opacity: 0.75;
 }

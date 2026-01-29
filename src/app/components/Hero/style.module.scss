@@ -3,16 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 1rem;
+  padding: clamp(3rem, 10vh, 8rem) 1rem;
   text-align: center;
-  height: 100%; 
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .heroSection {
-    gap: 4rem; 
-  }
+  height: 80dvh;
+  gap: clamp(2rem, 5vh, 4rem);
 }
 
 .title {
@@ -53,4 +47,3 @@
   font-size: clamp(1.5rem, 5vw, 48px);
   color: var(--primary-color);
 }
-

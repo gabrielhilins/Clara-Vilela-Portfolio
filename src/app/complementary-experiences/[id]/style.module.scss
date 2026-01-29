@@ -106,13 +106,14 @@
   font-weight: 600;
 }
 
-/* ROW: lista + botão */
+/* ROW: lista */
 .strategiesRow {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .strategiesList {
@@ -120,41 +121,18 @@
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .strategiesList li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1rem 0 0;
-}
-
-/* ---------- PRESENTATION BUTTON ---------- */
-
-.seeMoreProjectButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.55rem 1.1rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-
-  background-color: transparent;
-  color: var(--primary-color);
-
+  padding: 0.4rem 0.8rem;
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.seeMoreProjectButton:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  transform: translateY(-2px);
+  font-size: 0.9rem;
 }
 
 /* ---------- GALLERY BUTTON ---------- */
@@ -262,11 +240,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
-  }
-
-  .seeMoreProjectButton {
-    width: 100%;
-    justify-content: center;
   }
 }
 
