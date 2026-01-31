@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/app/components/ThemeProvider";
 import type { Metadata } from "next";
 import { Josefin_Slab, Quicksand } from "next/font/google";
 import "./globals.css";
@@ -61,10 +62,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${quicksand.variable} ${josefinSlab.variable}`}>
-        {children}
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

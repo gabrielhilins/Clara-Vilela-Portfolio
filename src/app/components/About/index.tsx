@@ -1,11 +1,26 @@
+"use client";
+
 import Frame from "../Frame";
 import AnimateInView from "../AnimateInView";
 import style from "./style.module.scss";
 import Image from "next/image";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
+import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
 const About = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const aboutImageSrc = mounted && theme === 'dark' 
+    ? '/d173b57d-a7ff-4e4c-915c-8bd9d20bd218 3_white.png' 
+    : '/d173b57d-a7ff-4e4c-915c-8bd9d20bd218 3.png';
+
   return (
     <Frame>
       <AnimateInView>
@@ -14,7 +29,7 @@ const About = () => {
           <div className={style.contentContainer}>
             <div className={style.imageContainer}>
               <Image
-                src="/d173b57d-a7ff-4e4c-915c-8bd9d20bd218 3.png"
+                src={aboutImageSrc}
                 alt="Clara Vilela"
                 fill
                 sizes="(max-width: 900px) 100vw, 40vw"

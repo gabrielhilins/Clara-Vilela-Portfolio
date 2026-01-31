@@ -10,7 +10,8 @@ import { IoArrowBack } from "react-icons/io5";
 import { MdOutlineSlideshow } from "react-icons/md";
 
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { projectsData } from "@/app/data/projects";
 import { skillsData } from "@/app/data/skills";
 import Image from "next/image";
@@ -19,6 +20,13 @@ const ProjectPage = () => {
   const params = useParams();
   const router = useRouter();
   const projectId = params.id;
+
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const project = projectsData.find((p) => p.url === `/projects/${projectId}`);
 
@@ -32,6 +40,16 @@ const ProjectPage = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const getThemedLogoUrl = (logoUrl: string) => {
+    if (!mounted || !logoUrl.endsWith('.svg')) {
+      return logoUrl;
+    }
+    if (theme === 'dark') {
+      return logoUrl.replace('.svg', '_white.svg');
+    }
+    return logoUrl;
   };
 
   if (!project) {
@@ -94,7 +112,7 @@ const ProjectPage = () => {
                       return (
                         <li key={index} title={softwareName}>
                           <Image
-                            src={softwareUrl}
+                            src={getThemedLogoUrl(softwareUrl)}
                             alt={`${softwareName} logo`}
                             width={36}
                             height={36}

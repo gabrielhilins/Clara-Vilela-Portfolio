@@ -14,7 +14,8 @@
 .developerText {
   font-size: clamp(0.8rem, 1.5vw, 0.9rem);
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--foreground);
+  opacity: 0.8;
   letter-spacing: 1px;
   font-style: italic;
   line-height: 1;

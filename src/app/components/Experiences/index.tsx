@@ -1,7 +1,8 @@
 "use client";
 
 import Frame from "../Frame";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import AnimateInView from "../AnimateInView";
 import style from "./style.module.scss";
 import Image from "next/image";
@@ -26,6 +27,23 @@ const Experiences = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const currentExperiences = experiencesData;
 
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const getThemedImageUrl = (imageUrl: string) => {
+    if (!mounted || !imageUrl.endsWith('.png')) {
+      return imageUrl;
+    }
+    if (theme === 'dark') {
+      return imageUrl.replace('.png', '_white.png');
+    }
+    return imageUrl;
+  };
+
   const renderExperienceItem = (exp: Experience) => (
     <div
       className={`${style.experienceItem} ${
@@ -34,7 +52,7 @@ const Experiences = () => {
     >
       <div className={style.imageWrapper}>
         <Image
-          src={exp.imageUrl}
+          src={getThemedImageUrl(exp.imageUrl)}
           alt={exp.title}
           width={250}
           height={250}

@@ -1,15 +1,22 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary-color: #000073;
-  --secondary-color: #FFFFFF;
+  /* Base colors */
+  --blue: #000073;
+  --white: #FFFFFF;
+  --dark-text: #171717;
+
+  /* Light theme variables */
+  --primary-color: var(--blue);
+  --secondary-color: var(--white);
+  --background: var(--white);
+  --foreground: var(--dark-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  /* Dark theme variables */
+  --primary-color: var(--white);
+  --secondary-color: var(--blue);
+  --background: var(--blue);
+  --foreground: var(--white);
 }
 
 html,

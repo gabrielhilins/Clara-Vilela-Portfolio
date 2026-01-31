@@ -6,9 +6,14 @@
   min-height: 100vh;
   width: 100%;
   padding: 2rem;
-  background: white;
+  background: var(--background);
   position: relative;
   overflow: hidden;
+}
+
+/* Invert corner image color in dark mode */
+:global(html.dark) .cornerSquare {
+  filter: brightness(0) invert(1);
 }
 
 @media (min-width: 768px) {
@@ -63,7 +68,7 @@
     position: absolute;
     width: 5px;
     height: 70%; 
-    background-color: #040477;
+    background-color: var(--primary-color);
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
@@ -82,7 +87,7 @@
   .divider {
     border: none;
     height: 5px;
-    background-color: #040477;
+    background-color: var(--primary-color);
     border-radius: 999px; 
   }
 

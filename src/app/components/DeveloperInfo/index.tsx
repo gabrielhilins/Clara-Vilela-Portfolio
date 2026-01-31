@@ -1,10 +1,25 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import style from './style.module.scss';
+import { useTheme } from 'next-themes';
 
 const DeveloperInfo: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    // Render a placeholder or null on the server to avoid hydration mismatch
+    return null; 
+  }
+
+  const wordmarkSrc = theme === 'dark' ? '/Wordmark SVG.svg' : '/Wordmark Azul.svg';
+
   return (
     <div className={style.columnDev}>
       <div className={style.devContent}>
@@ -16,7 +31,7 @@ const DeveloperInfo: React.FC = () => {
           className={style.wordmarkLink}
         >
           <Image
-            src="/Wordmark Azul.svg"
+            src={wordmarkSrc}
             alt="GGABS Tech & Design"
             className={style.wordmarkImage}
             width={100}
