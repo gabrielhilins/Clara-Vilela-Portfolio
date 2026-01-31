@@ -5,9 +5,6 @@
   width: 100%;
   padding: 3rem 2rem;
 }
-
-/* ---------- BACK BUTTON ---------- */
-
 .backButton {
   background: transparent;
   border: none;
@@ -28,9 +25,6 @@
   transform: translateX(-4px);
   text-decoration: underline;
 }
-
-/* ---------- TITLE ---------- */
-
 .sectionTitle {
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   font-weight: 600;
@@ -39,9 +33,6 @@
   margin-bottom: 3.5rem;
   text-align: center;
 }
-
-/* ---------- CONTENT ---------- */
-
 .contentContainer {
   display: flex;
   width: 100%;
@@ -49,9 +40,6 @@
   gap: 4rem;
   align-items: flex-start;
 }
-
-/* ---------- LEFT (IMAGES) ---------- */
-
 .leftColumn {
   flex: 2;
   display: flex;
@@ -63,9 +51,6 @@
   width: 100%;
   max-width: 900px;
 }
-
-/* ---------- RIGHT (TEXT) ---------- */
-
 .rightColumn {
   flex: 1;
   color: var(--primary-color);
@@ -91,8 +76,6 @@
   margin-bottom: 3rem;
   text-align: justify;
 }
-
-/* New Instagram button styles */
 .instagramButton {
   display: flex;
   align-items: center;
@@ -106,20 +89,17 @@
   color: var(--secondary-color);
   border: 1px solid var(--primary-color);
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-  text-decoration: none; /* Remove underline for links */
-  margin-top: 1rem; /* Add some spacing from the description */
-  margin-bottom: 1.5rem; /* Space from the strategies section */
-  align-self: flex-start; /* Align it to the left */
-  max-width: fit-content; /* Ensure button doesn't take full width */
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+  max-width: fit-content;
 
   &:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
   }
 }
-
-/* ---------- STRATEGIES ---------- */
-
 .strategiesSection {
   margin-top: 2.5rem;
   display: flex;
@@ -131,8 +111,6 @@
   font-size: 1.4rem;
   font-weight: 600;
 }
-
-/* ROW: lista */
 .strategiesRow {
   display: flex;
   align-items: center;
@@ -160,9 +138,6 @@
   border-radius: 0.5rem;
   font-size: 0.9rem;
 }
-
-/* ---------- GALLERY BUTTON ---------- */
-
 .viewGalleryButton {
   background-color: transparent;
   color: var(--primary-color);
@@ -183,11 +158,6 @@
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
-
-/* ================================================================= */
-/* =========================== RESPONSIVE ========================== */
-/* ================================================================= */
-
 @media (max-width: 900px) {
   .projectPageSection {
     padding: 3rem 1.5rem;
@@ -274,9 +244,6 @@
     gap: 1.25rem;
   }
 }
-
-/* ---------- NOT FOUND ---------- */
-
 .projectNotFound {
   text-align: center;
   color: var(--primary-color);

@@ -5,9 +5,6 @@
   width: 100%;
   padding: 3rem 2rem;
 }
-
-/* ---------- BACK BUTTON ---------- */
-
 .backButton {
   background: transparent;
   border: none;
@@ -28,9 +25,6 @@
   transform: translateX(-4px);
   text-decoration: underline;
 }
-
-/* ---------- TITLE ---------- */
-
 .sectionTitle {
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   font-weight: 600;
@@ -39,9 +33,6 @@
   margin-bottom: 3.5rem;
   text-align: center;
 }
-
-/* ---------- CONTENT ---------- */
-
 .contentContainer {
   display: flex;
   width: 100%;
@@ -49,9 +40,6 @@
   gap: 4rem;
   align-items: flex-start;
 }
-
-/* ---------- LEFT (IMAGES) ---------- */
-
 .leftColumn {
   flex: 2;
   display: flex;
@@ -63,9 +51,6 @@
   width: 100%;
   max-width: 900px;
 }
-
-/* ---------- RIGHT (TEXT) ---------- */
-
 .rightColumn {
   flex: 1;
   color: var(--primary-color);
@@ -92,9 +77,6 @@
   text-align: justify;
   color: var(--foreground);
 }
-
-/* ---------- STRATEGIES ---------- */
-
 .strategiesSection {
   margin-top: 2.5rem;
   display: flex;
@@ -106,8 +88,6 @@
   font-size: 1.4rem;
   font-weight: 600;
 }
-
-/* ROW: lista + botão */
 .strategiesRow {
   display: flex;
   align-items: center;
@@ -129,9 +109,6 @@
   justify-content: center;
   margin: 0 1rem 0 0;
 }
-
-/* ---------- PRESENTATION BUTTON ---------- */
-
 .seeMoreProjectButton {
   display: inline-flex;
   align-items: center;
@@ -157,9 +134,6 @@
   color: var(--secondary-color);
   transform: translateY(-2px);
 }
-
-/* ---------- GALLERY BUTTON ---------- */
-
 .viewGalleryButton {
   background-color: transparent;
   color: var(--primary-color);
@@ -180,11 +154,6 @@
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
-
-/* ================================================================= */
-/* =========================== RESPONSIVE ========================== */
-/* ================================================================= */
-
 @media (max-width: 900px) {
   .projectPageSection {
     padding: 3rem 1.5rem;
@@ -269,9 +238,6 @@
     justify-content: center;
   }
 }
-
-/* ---------- NOT FOUND ---------- */
-
 .projectNotFound {
   text-align: center;
   color: var(--primary-color);

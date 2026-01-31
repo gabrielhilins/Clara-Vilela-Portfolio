@@ -4,7 +4,7 @@ import Frame from "../Frame";
 import AnimateInView from "../AnimateInView";
 import style from "./style.module.scss";
 import { IoArrowBack } from "react-icons/io5";
-import DeveloperInfo from "../DeveloperInfo";
+import DeveloperInfo from "./DeveloperInfo";
 
 const Footer = () => {
   const scrollToTop = () => {

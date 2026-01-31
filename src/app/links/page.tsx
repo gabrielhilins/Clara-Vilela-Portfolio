@@ -5,7 +5,7 @@ import style from './style.module.scss'
 import Image
  from 'next/image';
 import { ReactElement } from 'react';
-import DeveloperInfo from '../components/DeveloperInfo';
+import DeveloperInfo from '../components/Footer/DeveloperInfo';
 
 const MainLinks = () => {
   const renderIcon = (icon: string | ReactElement) => { 

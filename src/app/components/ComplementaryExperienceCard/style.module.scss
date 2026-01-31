@@ -18,16 +18,13 @@
 .hr{
   color: var(--primary-color);
 }
-
-/* ================= IMAGE ================= */
-
 .imageWrapper {
   position: relative;
   width: 40%;
   height: auto;
   overflow: hidden;
   flex-shrink: 0;
-  border-radius: 1.25rem 0 0 1.25rem; /* Round only the left corners */
+  border-radius: 1.25rem 0 0 1.25rem;
 }
 
 .image {
@@ -37,15 +34,12 @@
 .card:hover .image {
   transform: scale(1.04);
 }
-
-/* ================= CONTENT ================= */
-
 .cardContent {
   width: 62%;
-  padding: 2.25rem 2.5rem; /* mais respiro */
+  padding: 2.25rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem; /* Keep gap for textContent and cardActions */
+  gap: 1.75rem;
 }
 
 .textContent {
@@ -64,36 +58,28 @@
 .cardContent p {
   font-size: 1.05rem;
   line-height: 1.65;
-  color: var(--foreground); /* Changed to theme variable */
+  color: var(--foreground);
   text-align: justify;
 }
-
-/* Add styles for the new cardActions div */
 .cardActions {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Space between the button and the icon */
-  margin-top: auto; /* Push cardActions to the bottom */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
 }
-
-/* Style for the Instagram icon link */
 .instagramIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-color); /* Icon color */
-  transition: transform 0.25s ease; /* Only transform transition */
+  color: var(--primary-color);
+  transition: transform 0.25s ease;
   flex-shrink: 0;
 
   &:hover {
-    transform: translateY(-3px); /* Hover effect */
+    transform: translateY(-3px);
   }
 }
-
-
-/* ================= BUTTON ================= */
-
 .learnMoreButton {
   display: flex;
   align-items: center;
@@ -113,10 +99,6 @@
     color: var(--primary-color);
   }
 }
-
-/* ================= RESPONSIVE ================= */
-
-/* Tablet */
 @media (max-width: 1024px) {
   .card {
     min-height: 300px;
@@ -130,8 +112,6 @@
     padding: 2rem;
   }
 }
-
-/* Mobile */
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
@@ -140,7 +120,7 @@
 
   .imageWrapper {
     width: 100%;
-    min-height: 220px; /* imagem menor no mobile */
+    min-height: 220px;
   }
 
   .cardContent {
@@ -149,7 +129,7 @@
   }
 
   .cardActions {
-    justify-content: center; /* Center items horizontally on mobile */
+    justify-content: center;
   }
 
   .cardContent h3 {
@@ -160,8 +140,6 @@
     font-size: 0.95rem;
   }
 }
-
-/* Small mobile */
 @media (max-width: 480px) {
   .imageWrapper {
     min-height: 190px;

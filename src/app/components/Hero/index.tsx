@@ -4,7 +4,7 @@ import Frame from '../Frame';
 import AnimateInView from '../AnimateInView';
 import style from './style.module.scss';
 import Image from 'next/image';
-import { ThemeSwitcher } from '../ThemeSwitcher';
+import { ThemeSwitcher } from './ThemeSwitcher';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
