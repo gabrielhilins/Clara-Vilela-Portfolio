@@ -1,7 +1,6 @@
 "use client";
 
 import Frame from "../../components/Frame";
-import AnimateInView from "../../components/AnimateInView";
 import style from "./style.module.scss";
 import BentoGrid from "../../components/BentoGrid";
 import ModalCarousel from "../../components/ModalCarousel";
@@ -58,7 +57,6 @@ const ProjectPage = () => {
 
   return (
     <Frame>
-      <AnimateInView>
         <section className={style.projectPageSection}>
           <button
             className={style.backButton}
@@ -108,7 +106,7 @@ const ProjectPage = () => {
 
                   <button
                     className={style.seeMoreProjectButton}
-                    onClick={() => openModal(0)}
+                    onClick={() => window.open(project.presentationUrl, '_blank')}
                   >
                     <MdOutlineSlideshow />
                     Acesse a apresentação final do projeto
@@ -126,7 +124,6 @@ const ProjectPage = () => {
             />
           )}
         </section>
-      </AnimateInView>
     </Frame>
   );
 };

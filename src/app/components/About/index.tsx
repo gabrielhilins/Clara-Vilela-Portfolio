@@ -26,18 +26,13 @@ const About = () => {
             <div className={style.textContainer}>
               <h3>Clara Vilela - Estudante de Arquitetura</h3>
               <p>
-                Sou a Maria Clara Vilela, tenho 20 anos, sou natural de Garanhuns
-                - PE. Atualmente estou cursando o 6º período de Arquitetura e
-                Urbanismo na Universidade Federal da Paraíba e estagiando no
-                escritório Regina Neri Arquitetura. Com essas experiências, pude
-                expandir os conhecimentos sobre a minha área de formação, tais
-                quais o uso de softwares variados, realização de projetos de
-                arquitetura, interiores e urbanismo, bem como a participação em
-                eventos de patrimônio histórico. Anseio em vivenciar a área
-                urbanística profissionalmente e poder contribuir para a
-                construção de espaços públicos. Além disso, me interesso
-                progressivamente pela modelagem paramétrica, com o objetivo de
-                aprofundar ainda mais os meus conhecimentos no software Revit.
+                Tenho 20 anos e sou estudante do 6º período de Arquitetura e
+                Urbanismo na UFPB. Estagiando no escritório Regina Neri
+                Arquitetura, expandi meus conhecimentos em softwares, projetos
+                de arquitetura, interiores e urbanismo. Tenho grande interesse
+                pela área urbanística, modelagem paramétrica e em aprofundar
+                meus conhecimentos em Revit, buscando contribuir para a
+                construção de espaços públicos.
               </p>
               <h4 className={style.contactTitle}>Contato</h4>
               <div className={style.contactButtons}>

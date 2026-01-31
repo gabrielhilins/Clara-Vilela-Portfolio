@@ -12,7 +12,8 @@ export const projectsData = [
       "/Projeto-1-4.png",
       "/Projeto-1-5.png",
     ],
-    softwares: ["/simple-icons_sketchup.svg", "/simple-icons_canva.svg"]
+    softwares: ["/simple-icons_sketchup.svg", "/simple-icons_canva.svg"],
+    presentationUrl: "https://drive.google.com/drive/folders/1EDEtw15KV5VSTSkUecCbG5dXw23QVMmb"
   },
   {
     projectNumber: "02",
@@ -26,7 +27,8 @@ export const projectsData = [
       "/Projeto-2-3.png",
       "/Projeto-2-4.png",
     ],
-    softwares: ["/game-icons_rhinoceros-horn.svg", "/simple-icons_canva.svg"]
+    softwares: ["/game-icons_rhinoceros-horn.svg", "/simple-icons_canva.svg"],
+    presentationUrl: "https://drive.google.com/drive/folders/1I6a6F4EvKcjXMht6-4gdkIzzjl7FCs9Q"
   },
   {
     projectNumber: "03",
@@ -40,7 +42,8 @@ export const projectsData = [
       "/Projeto-3-2.png",
       "/Projeto-3-3.png",
     ],
-    softwares: ["/simple-icons_autodeskrevit.svg", "/simple-icons_canva.svg"]
+    softwares: ["/simple-icons_autodeskrevit.svg", "/simple-icons_canva.svg"],
+    presentationUrl: "https://drive.google.com/drive/folders/1wLuVlxs_gSMSuutWdPOAAp1L7rC9L-3J"
   },
   {
     projectNumber: "04",
@@ -55,6 +58,7 @@ export const projectsData = [
       "/Projeto-4-4.png",
       "/Projeto-4-5.png",
     ],
-    softwares: ["/simple-icons_qgis.svg", "/simple-icons_canva.svg"]
+    softwares: ["/simple-icons_qgis.svg", "/simple-icons_canva.svg"],
+    presentationUrl: "https://drive.google.com/drive/folders/19CwEw5snaSbAdvI_i56B7H_DWoFhQqtu"
   }
 ];

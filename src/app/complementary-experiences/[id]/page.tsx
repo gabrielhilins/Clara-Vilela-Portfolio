@@ -1,13 +1,13 @@
 "use client";
 
 import Frame from "../../components/Frame";
-import AnimateInView from "../../components/AnimateInView";
 import style from "./style.module.scss";
 import BentoGrid from "../../components/BentoGrid";
 import ModalCarousel from "../../components/ModalCarousel";
 
 import { AiFillPicture } from "react-icons/ai";
 import { IoArrowBack } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
 
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -47,7 +47,6 @@ const ComplementaryExperiencePage = () => {
 
   return (
     <Frame>
-      <AnimateInView>
         <section className={style.projectPageSection}>
           <button
             className={style.backButton}
@@ -74,6 +73,18 @@ const ComplementaryExperiencePage = () => {
               <hr className={style.titleHr} />
               <p>{experience.description}</p>
 
+              {experience.instagramUrl && (
+                <a
+                  href={experience.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={style.instagramButton}
+                  aria-label="Visitar Instagram Arte e Kids"
+                >
+                  <FaInstagram /> Visitar Instagram Arte e Kids
+                </a>
+              )}
+
               <div className={style.strategiesSection}>
                 <h4>Estratégias</h4>
 
@@ -98,7 +109,6 @@ const ComplementaryExperiencePage = () => {
             />
           )}
         </section>
-      </AnimateInView>
     </Frame>
   );
 };

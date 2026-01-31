@@ -5,7 +5,8 @@
   justify-content: center;
   width: 100%;
   padding: clamp(2rem, 5vh, 4rem) 1rem;
-  height: 80dvh;
+  min-height: 80dvh;
+  height: auto;
 }
 
 .sectionTitle {
@@ -45,22 +46,24 @@
 }
 
 .textContainer h3 {
-  font-size: clamp(1.45rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: bold;
   margin-bottom: 0.75rem;
+  text-align: justify; /* Adicionado para justificar o texto em todas as telas */
 }
 
 .textContainer p {
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  line-height: 1.8;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
 .contactTitle {
-  font-size: clamp(1.15rem, 2vw, 1.3rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 600;
   margin-bottom: 0.75rem;
+  text-align: justify; /* Adicionado para justificar o texto em todas as telas */
 }
 
 .contactButtons {
@@ -74,7 +77,7 @@
   align-items: center;
   gap: 0.4rem;
   padding: clamp(0.5rem, 1vw, 0.6rem) clamp(0.9rem, 2vw, 1.2rem);
-  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
   border-radius: 0.45rem;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
@@ -84,7 +87,7 @@
 }
 
 .contactButton svg {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
 }
 
 .contactButton:hover {
@@ -99,51 +102,27 @@
   }
 
   .imageContainer {
-    flex: none;
-    width: 100%;
-    height: clamp(300px, 50vw, 350px); /* Adjusted height */
-    padding: 1.25rem;
+    display: none; /* Imagem removida em telas menores */
   }
 
   .textContainer {
     padding: 1.5rem; /* Adjusted padding */
-    text-align: center;
-    align-items: center;
+    align-items: flex-start; /* Alinha o texto à esquerda quando a imagem é removida */
   }
 
-  .textContainer h3 {
-    text-align: center;
-  }
-
-  .textContainer p {
-    text-align: center;
-  }
-
-  .contactTitle {
-    text-align: center;
-  }
+  /* Removido text-align: center para h3, p e contactTitle */
 
   .contactButtons {
-    justify-content: center;
+    justify-content: flex-start; /* Alinha os botões à esquerda quando a imagem é removida */
   }
 }
 
 @media (max-width: 500px) {
-  .imageContainer {
-    height: clamp(200px, 60vw, 280px); /* Adjusted height */
-    padding: 1rem;
-  }
-
   .textContainer {
     padding: 1.25rem; /* Adjusted padding */
   }
 
   .contactButtons { /* Adjusted gap for contact buttons */
     gap: 0.5rem;
-  }
-
-  .contactButton { /* Removed specific width and justify for individual buttons */
-    /* width: 100%; */
-    /* justify-content: center; */
   }
 }

@@ -1,6 +1,6 @@
 export const skillsData = {
   softwares: [
-    { name: "AutoCAD", level: "Intermediários", logoUrl: "/simple-icons_autocad.svg" },
+    { name: "AutoCAD", level: "Intermediário", logoUrl: "/simple-icons_autocad.svg" },
     { name: "Revit", level: "Intermediário", logoUrl: "/simple-icons_autodeskrevit.svg" },
     { name: "SketchUp", level: "Intermediário", logoUrl: "/simple-icons_sketchup.svg" },
     { name: "QGIS", level: "Intermediário", logoUrl: "/simple-icons_qgis.svg" },

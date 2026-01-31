@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import { LuArrowUpRight } from "react-icons/lu";
+import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
 import AnimateInView from "../AnimateInView";
 
 interface ComplementaryExperienceCardProps {
@@ -43,9 +44,20 @@ const description = experience.description;
             <p>{description}</p>
           </div>
 
-          <span className={styles.learnMoreButton}>
-            <LuArrowUpRight /> Saiba mais
-          </span>
+          <div className={styles.cardActions}> {/* New wrapper div */}
+            <span className={styles.learnMoreButton}>
+              <LuArrowUpRight /> Saiba mais
+            </span>
+            <a
+              href="https://www.instagram.com/artes.e.kids/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.instagramIcon}
+              aria-label="Instagram Arte e Kids"
+            >
+              <FaInstagram size={24} />
+            </a>
+          </div>
         </div>
       </Link>
     </AnimateInView>

@@ -92,6 +92,32 @@
   text-align: justify;
 }
 
+/* New Instagram button styles */
+.instagramButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.7rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  text-decoration: none; /* Remove underline for links */
+  margin-top: 1rem; /* Add some spacing from the description */
+  margin-bottom: 1.5rem; /* Space from the strategies section */
+  align-self: flex-start; /* Align it to the left */
+  max-width: fit-content; /* Ensure button doesn't take full width */
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+}
+
 /* ---------- STRATEGIES ---------- */
 
 .strategiesSection {

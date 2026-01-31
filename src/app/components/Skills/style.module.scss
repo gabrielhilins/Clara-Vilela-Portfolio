@@ -20,7 +20,7 @@
 .categoriesContainer {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 3vh, 2.5rem);
+  gap: clamp(2rem, 4vh, 3rem); /* Aumentado o gap entre categorias */
   width: 100%;
   max-width: 1200px;
 }
@@ -33,15 +33,15 @@
 }
 
 .categoryTitle {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw, 2.2rem); /* Levemente reduzido o tamanho máximo */
   color: var(--primary-color);
   text-align: center;
-  margin-bottom: clamp(1rem, 2.5vh, 1.5rem);
+  margin-bottom: clamp(1.2rem, 3vh, 1.8rem);
 }
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Tamanho mínimo do item reduzido */
   justify-content: center;
   gap: clamp(1.5rem, 4vw, 2.5rem);
   width: 100%;
@@ -49,42 +49,42 @@
 
 .skillItem {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Itens sempre empilhados verticalmente */
   align-items: center;
   text-align: center;
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 1.5vw, 0.8rem); /* Gap entre os elementos do item */
   color: var(--primary-color);
 }
 
 .skillHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  display: contents; /* Remove o container do header para um layout de coluna mais simples */
 }
 
 .skillLogo {
-  width: clamp(50px, 10vw, 60px);
-  height: clamp(50px, 10vw, 60px);
+  width: clamp(45px, 10vw, 55px); /* Tamanho do ícone ajustado */
+  height: clamp(45px, 10vw, 55px);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.25rem;
 }
 
 .skillLogo img {
   object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .skillName {
   font-weight: 600;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Fonte ajustada para melhor legibilidade */
 }
 
 .skillLevel {
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.75rem, 2vw, 0.85rem); /* Fonte ajustada */
   font-style: italic;
-  opacity: 0.8;
+  opacity: 0.9;
   border: 1px solid var(--primary-color);
   border-radius: 999px;
-  padding: clamp(0.25rem, 1vw, 0.3rem) clamp(0.75rem, 2vw, 0.8rem);
+  padding: clamp(0.2rem, 1vw, 0.25rem) clamp(0.6rem, 2vw, 0.75rem);
 }
