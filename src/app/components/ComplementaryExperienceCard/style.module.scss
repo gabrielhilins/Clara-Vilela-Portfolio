@@ -148,6 +148,10 @@
     padding: 1.5rem;
   }
 
+  .cardActions {
+    justify-content: center; /* Center items horizontally on mobile */
+  }
+
   .cardContent h3 {
     font-size: 1.45rem;
   }

@@ -207,6 +207,9 @@
   .rightColumn {
     order: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .leftColumn {
@@ -224,8 +227,11 @@
   }
 
   .rightColumn p {
-    text-align: center;
     font-size: 1rem;
+  }
+
+  .instagramButton {
+    align-self: center;
   }
 
   .strategiesRow {
