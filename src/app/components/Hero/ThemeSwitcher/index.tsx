@@ -22,14 +22,14 @@ export function ThemeSwitcher() {
         onClick={() => setTheme('light')} 
         className={theme === 'light' ? style.active : ''}
       >
-        modo claro
+        Modo Claro
       </button>
       <span>|</span>
       <button 
         onClick={() => setTheme('dark')} 
         className={theme === 'dark' ? style.active : ''}
       >
-        modo escuro
+        Modo Escuro
       </button>
     </div>
   );

@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   padding: clamp(2rem, 5vh, 4rem) 1rem;
-  min-height: 80dvh;
+  max-height: 80dvh;
   height: auto;
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   width: 100%;
   max-width: 1200px;
-  gap: clamp(1.5rem, 3vw, 2.5rem); /* Reduced gap */
+  gap: clamp(1.5rem, 3vw, 2.5rem); 
   background-color: var(--secondary-color);
   border-radius: 1rem;
   overflow: hidden;
@@ -31,13 +31,13 @@
 
 .imageContainer {
   position: relative;
-  flex: 1; /* Adjusted flex for image */
+  flex: 1;
   padding: 1.5rem;
-  height: clamp(450px, 40vw, 600px); /* Increased image height */
+  height: clamp(250px, 40vw, 400px); 
 }
 
 .textContainer {
-  flex: 1.5; /* Increased flex for text */
+  flex: 1.5;
   padding: clamp(1.5rem, 4vw, 3rem);
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: bold;
   margin-bottom: 0.75rem;
-  text-align: justify; /* Adicionado para justificar o texto em todas as telas */
+  text-align: justify; 
 }
 
 .textContainer p {
@@ -63,7 +63,7 @@
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 600;
   margin-bottom: 0.75rem;
-  text-align: justify; /* Adicionado para justificar o texto em todas as telas */
+  text-align: justify;
 }
 
 .contactButtons {
@@ -102,27 +102,25 @@
   }
 
   .imageContainer {
-    display: none; /* Imagem removida em telas menores */
+    display: none; 
   }
 
   .textContainer {
-    padding: 1.5rem; /* Adjusted padding */
-    align-items: flex-start; /* Alinha o texto à esquerda quando a imagem é removida */
+    padding: 1.5rem; 
+    align-items: flex-start;
   }
 
-  /* Removido text-align: center para h3, p e contactTitle */
-
   .contactButtons {
-    justify-content: flex-start; /* Alinha os botões à esquerda quando a imagem é removida */
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 500px) {
   .textContainer {
-    padding: 1.25rem; /* Adjusted padding */
+    padding: 1.25rem; 
   }
 
-  .contactButtons { /* Adjusted gap for contact buttons */
+  .contactButtons { 
     gap: 0.5rem;
   }
 }

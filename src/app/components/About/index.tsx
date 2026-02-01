@@ -21,6 +21,14 @@ const About = () => {
     ? '/d173b57d-a7ff-4e4c-915c-8bd9d20bd218 3_white.png' 
     : '/d173b57d-a7ff-4e4c-915c-8bd9d20bd218 3.png';
 
+  const today = new Date();
+  const birthDate = new Date(2005, 1, 17); 
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
   return (
     <Frame>
       <AnimateInView>
@@ -41,7 +49,7 @@ const About = () => {
             <div className={style.textContainer}>
               <h3>Clara Vilela - Estudante de Arquitetura</h3>
               <p>
-                Tenho 20 anos e sou estudante do 6º período de Arquitetura e
+                Tenho {age} anos e sou estudante do 6º período de Arquitetura e
                 Urbanismo na UFPB. Estagiando no escritório Regina Neri
                 Arquitetura, expandi meus conhecimentos em softwares, projetos
                 de arquitetura, interiores e urbanismo. Tenho grande interesse

@@ -20,7 +20,7 @@
 .categoriesContainer {
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 4vh, 3rem); /* Aumentado o gap entre categorias */
+  gap: clamp(2rem, 4vh, 3rem); 
   width: 100%;
   max-width: 1200px;
 }
@@ -33,7 +33,7 @@
 }
 
 .categoryTitle {
-  font-size: clamp(1.5rem, 4vw, 2.2rem); /* Levemente reduzido o tamanho máximo */
+  font-size: clamp(1.5rem, 4vw, 2.2rem); 
   color: var(--primary-color);
   text-align: center;
   margin-bottom: clamp(1.2rem, 3vh, 1.8rem);
@@ -41,7 +41,7 @@
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Tamanho mínimo do item reduzido */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
   justify-content: center;
   gap: clamp(1.5rem, 4vw, 2.5rem);
   width: 100%;
@@ -49,19 +49,19 @@
 
 .skillItem {
   display: flex;
-  flex-direction: column; /* Itens sempre empilhados verticalmente */
+  flex-direction: column; 
   align-items: center;
   text-align: center;
-  gap: clamp(0.5rem, 1.5vw, 0.8rem); /* Gap entre os elementos do item */
+  gap: clamp(0.5rem, 1.5vw, 0.8rem); 
   color: var(--primary-color);
 }
 
 .skillHeader {
-  display: contents; /* Remove o container do header para um layout de coluna mais simples */
+  display: contents; 
 }
 
 .skillLogo {
-  width: clamp(45px, 10vw, 55px); /* Tamanho do ícone ajustado */
+  width: clamp(45px, 10vw, 55px); 
   height: clamp(45px, 10vw, 55px);
   display: flex;
   align-items: center;
@@ -77,11 +77,11 @@
 
 .skillName {
   font-weight: 600;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Fonte ajustada para melhor legibilidade */
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem); 
 }
 
 .skillLevel {
-  font-size: clamp(0.75rem, 2vw, 0.85rem); /* Fonte ajustada */
+  font-size: clamp(0.75rem, 2vw, 0.85rem); 
   font-style: italic;
   opacity: 0.9;
   border: 1px solid var(--primary-color);
