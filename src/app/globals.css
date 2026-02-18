@@ -27,12 +27,16 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--white);
   font-family: var(--font-josefin-slab);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh; 
   
+}
+
+.theme-background {
+  background: var(--background);
 }
 
 * {

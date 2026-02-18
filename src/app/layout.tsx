@@ -1,3 +1,4 @@
+import ConditionalBodyClass from "./components/ConditionalBodyClass";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import type { Metadata } from "next";
 import { Josefin_Slab, Quicksand } from "next/font/google";
@@ -69,8 +70,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Analytics />
+          <ConditionalBodyClass>
+            {children}
+            <Analytics />
+          </ConditionalBodyClass>
         </ThemeProvider>
       </body>
     </html>
