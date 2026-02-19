@@ -13,7 +13,10 @@ const Skills = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const getThemedLogoUrl = (logoUrl: string) => {

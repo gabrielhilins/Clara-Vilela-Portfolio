@@ -24,13 +24,13 @@ export const linksData = [
   {
     id: 4,
     title: "Whatsapp",
-    url: "https://wa.me/+5511999999999", 
+    url: "https://wa.me/+5583998342290", 
     icon: <FaWhatsapp />,
   },
   {
     id: 5,
     title: "Email",
-    url: "mailto:clara.vilela@example.com", 
+    url: "mailto:vilelaclara17@gmail.com", 
     icon: <IoMailOutline/>,
   },
 ];

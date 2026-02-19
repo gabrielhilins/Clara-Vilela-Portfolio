@@ -11,6 +11,24 @@
   overflow: hidden;
 }
 
+.forceLight {
+  --primary-color: #000073 !important;
+  --secondary-color: #FFFFFF !important;
+  --background: #FFFFFF !important;
+  --foreground: #171717 !important;
+  
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+
+  .cornerSquare {
+    filter: none !important;
+  }
+
+  .verticalLine, .divider {
+    background-color: var(--primary-color) !important;
+  }
+}
+
 /* Invert corner image color in dark mode */
 :global(html.dark) .cornerSquare {
   filter: brightness(0) invert(1);

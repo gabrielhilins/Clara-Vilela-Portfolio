@@ -5,11 +5,12 @@ import style from './style.module.scss';
 
 interface FrameProps {
   children: React.ReactNode;
+  forceLight?: boolean;
 }
 
-const Frame: React.FC<FrameProps> = ({ children }) => {
+const Frame: React.FC<FrameProps> = ({ children, forceLight }) => {
   return (
-    <div className={style.frameContainer}>
+    <div className={`${style.frameContainer} ${forceLight ? style.forceLight : ''}`}>
       {}
       <div className={`${style.verticalLine} ${style.leftLine}`}></div>
       <div className={`${style.verticalLine} ${style.rightLine}`}></div>

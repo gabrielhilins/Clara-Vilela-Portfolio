@@ -12,7 +12,6 @@ import { FaInstagram } from "react-icons/fa";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { complementaryExperiencesData } from "@/app/data/complementaryExperiences";
-import Image from "next/image";
 
 const ComplementaryExperiencePage = () => {
   const params = useParams();

@@ -13,7 +13,10 @@ const Hero = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const sunImageSrc = mounted && theme === 'dark' ? '/Sun 1_white.png' : '/Sun 1.png';

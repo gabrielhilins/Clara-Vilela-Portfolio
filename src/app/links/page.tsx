@@ -16,7 +16,7 @@ const MainLinks = () => {
   };
 
   return (
-    <Frame>
+    <Frame forceLight={true}>
       <AnimateInView>
         <div className={style.contentWrapper}>
           <div className={style.linksContent}>
@@ -48,7 +48,7 @@ const MainLinks = () => {
             <p>© {new Date().getFullYear()} Clara Vilela. Todos os direitos reservados.</p>
           </div>
         </div>
-        <DeveloperInfo />
+        <DeveloperInfo forceLight={true} />
       </div>
       </AnimateInView>
     </Frame>

@@ -5,12 +5,19 @@ import Image from 'next/image';
 import style from './style.module.scss';
 import { useTheme } from 'next-themes';
 
-const DeveloperInfo: React.FC = () => {
+interface DeveloperInfoProps {
+  forceLight?: boolean;
+}
+
+const DeveloperInfo: React.FC<DeveloperInfoProps> = ({ forceLight }) => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   if (!mounted) {
@@ -18,7 +25,8 @@ const DeveloperInfo: React.FC = () => {
     return null; 
   }
 
-  const wordmarkSrc = theme === 'dark' ? '/Wordmark SVG.svg' : '/Wordmark Azul.svg';
+  const isDark = theme === 'dark' && !forceLight;
+  const wordmarkSrc = isDark ? '/Wordmark SVG.svg' : '/Wordmark Azul.svg';
 
   return (
     <div className={style.columnDev}>
