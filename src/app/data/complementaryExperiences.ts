@@ -5,6 +5,6 @@ export const complementaryExperiencesData = [
     title: 'Arte e Kids',
     description: 'O Arte e Kids é o projeto de aulas de inglês para crianças criado por uma professora de inglês autônoma. A função ocupada por mim no projeto é de gerenciar a conta oficial no Instagram, em que nele são divulgadas as datas comemorativas, avisos da programação de aulas e informações mais detalhadas sobre o Arte e Kids.',
     strategies: ['Social Media', "Canva", "Figma"],
-    instagramUrl: "https://www.instagram.com/arte.e.kids/", // Placeholder Instagram URL
+    instagramUrl: "https://www.instagram.com/artes.e.kids/", // Placeholder Instagram URL
   },
 ];
